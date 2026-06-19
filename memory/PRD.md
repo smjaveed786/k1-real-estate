@@ -20,7 +20,20 @@ Landing page for K1 Real Estate and Marketing business. Single-page design with 
 
 ---
 
-## What's Been Implemented — 2026-06-19
+## What's Been Implemented — 2026-06-19 (Update 2)
+
+### New Features Added
+- **Real Google Business Details** from Justdial/PinkBazaar:
+  - Address: Hussain Nagar 1st Line, Guntur–Ponnur Rd, Guntur, AP 522003
+  - Phone: +91 93921 40148
+  - Hours: Mon–Sun 9:00 AM – 8:00 PM
+  - Google Maps link with Place ID: ChIJib6s_OULSjoRundCpbAYxvw
+  - Rating: 4.9★
+- **3D Particle Canvas Background** — 160 gold particles rotating in 3D space with mouse parallax, covers entire page (fixed canvas below all sections)
+- **Dark/Light Theme Toggle** — Sun/Moon button in navbar, toggles all section backgrounds and text colors via `ThemeContext` and `useColors()` hook
+- **WhatsApp Button** — Direct chat link (+91 93921 40148) on Hero and Contact sections
+- **Guntur-Based Listings** — All 6 property listings updated with Guntur localities (Budampadu, Ponnur Road, NH-16, Lalapet, Hussain Nagar, CBD)
+- **Real About Section** — KBN branding, Guntur AP location, real stat cards
 
 ### Landing Page Sections
 - **Navbar** — Sticky glassmorphism, logo, nav links, mobile menu, "Get In Touch" CTA
