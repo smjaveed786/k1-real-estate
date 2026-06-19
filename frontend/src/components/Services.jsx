@@ -1,0 +1,87 @@
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import { Home, Building2, BarChart3, Headphones } from "lucide-react";
+
+const services = [
+  {
+    icon: <Home size={28} />,
+    title: "Residential Sales",
+    description:
+      "Expert guidance for buying and selling homes, villas, and apartments at the best market value.",
+  },
+  {
+    icon: <Building2 size={28} />,
+    title: "Commercial Properties",
+    description:
+      "Office spaces, retail outlets, and industrial properties for businesses ready to grow.",
+  },
+  {
+    icon: <BarChart3 size={28} />,
+    title: "Real Estate Marketing",
+    description:
+      "Strategic marketing campaigns that maximize property visibility and attract qualified buyers.",
+  },
+  {
+    icon: <Headphones size={28} />,
+    title: "Property Consultation",
+    description:
+      "End-to-end advisory services from valuation to legal documentation and registration.",
+  },
+];
+
+const Services = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.15 });
+
+  return (
+    <section
+      id="services"
+      className="py-24 md:py-32 px-6 md:px-12 lg:px-24 bg-[#121214]"
+      ref={ref}
+    >
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7 }}
+          className="mb-16"
+        >
+          <p className="text-xs font-semibold tracking-[0.25em] uppercase text-[#D4AF37] mb-4">
+            What We Offer
+          </p>
+          <h2
+            style={{ fontFamily: "'Playfair Display', serif" }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight text-[#FAFAFA]"
+          >
+            Our Services
+          </h2>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.map((service, i) => (
+            <motion.div
+              key={service.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: i * 0.12 }}
+              className="group bg-[#1A1A1D] border border-white/5 p-8 hover:border-[#D4AF37]/40 transition-all duration-500 hover:-translate-y-2"
+            >
+              <div className="text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform duration-300">
+                {service.icon}
+              </div>
+              <h3
+                style={{ fontFamily: "'Playfair Display', serif" }}
+                className="text-xl font-medium text-[#FAFAFA] mb-3"
+              >
+                {service.title}
+              </h3>
+              <p className="text-sm text-[#71717A] leading-relaxed">{service.description}</p>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
