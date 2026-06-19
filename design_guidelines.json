@@ -1,0 +1,135 @@
+{
+  "theme_and_archetype": {
+    "domain": "Real Estate and Marketing",
+    "theme": "DARK",
+    "archetype": "5 (Luxury)",
+    "description": "Cinematic, moody, and expensive. Optimized for high-end property buyers and investors, conveying trust, exclusivity, and premium service."
+  },
+  "typography": {
+    "fonts": {
+      "headings": "Playfair Display",
+      "body": "Manrope",
+      "mono_accent": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter leading-none",
+      "h2": "text-3xl sm:text-4xl lg:text-5xl font-light tracking-tight leading-tight",
+      "h3": "text-2xl sm:text-3xl font-medium tracking-tight",
+      "body_lg": "text-lg text-foreground/80 leading-relaxed",
+      "body": "text-base text-foreground/70 leading-relaxed",
+      "overline": "text-xs font-semibold tracking-[0.2em] uppercase text-accent"
+    },
+    "instructions": "Never use 'Inter' for headings. Emphasize contrast in weights (e.g., extremely light headings paired with highly legible body copy)."
+  },
+  "colors": {
+    "background": {
+      "primary": "#0A0A0B",
+      "secondary": "#121214",
+      "tertiary": "#1A1A1D"
+    },
+    "text": {
+      "primary": "#FAFAFA",
+      "secondary": "#A1A1AA",
+      "muted": "#71717A"
+    },
+    "accent": {
+      "primary": "#D4AF37",
+      "hover": "#F3D573",
+      "subtle": "rgba(212, 175, 55, 0.1)"
+    },
+    "border": {
+      "default": "rgba(255, 255, 255, 0.08)",
+      "focus": "rgba(212, 175, 55, 0.5)"
+    }
+  },
+  "spacing_and_layout": {
+    "container_padding": "px-6 md:px-12 lg:px-24",
+    "section_spacing": "py-24 md:py-32",
+    "border_radius": {
+      "small": "rounded-sm",
+      "default": "rounded-none",
+      "large": "rounded-none"
+    },
+    "grid_patterns": {
+      "bento_marketing": "grid-cols-1 md:grid-cols-12 gap-8 md:gap-12",
+      "listings": "grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    },
+    "surface_styles": {
+      "glassmorphism": "backdrop-blur-xl bg-black/40 border border-white/10",
+      "solid_card": "bg-[#121214] border border-white/5 shadow-2xl"
+    }
+  },
+  "motion_and_interactions": {
+    "hover_states": {
+      "buttons": "transition-all duration-300 hover:bg-[#F3D573] hover:text-black",
+      "cards": "transition-transform duration-500 hover:-translate-y-2",
+      "images": "transition-transform duration-700 hover:scale-105"
+    },
+    "animations": {
+      "fade_in_up": "framer-motion standard entry for sections (y: 30, opacity: 0 -> y: 0, opacity: 1, duration: 0.8, ease: [0.22, 1, 0.36, 1])"
+    }
+  },
+  "components": {
+    "header": {
+      "style": "sticky top-0 z-50 w-full backdrop-blur-2xl bg-[#0A0A0B]/80 border-b border-white/5 transition-colors duration-300",
+      "elements": "Logo (Playfair Display, tracking-widest), centered or right-aligned sparse navigation, CTA 'Request Access'"
+    },
+    "hero": {
+      "layout": "min-h-[90vh] flex items-end pb-24 relative overflow-hidden",
+      "overlay": "absolute inset-0 bg-gradient-to-t from-[#0A0A0B] via-[#0A0A0B]/40 to-black/20 z-10",
+      "content_alignment": "relative z-20 w-full max-w-5xl text-left"
+    },
+    "contact_form": {
+      "style": "Minimalist frictionless form. Use Shadcn inputs heavily customized.",
+      "input_style": "bg-transparent border-0 border-b border-white/20 rounded-none px-0 py-4 focus-visible:ring-0 focus-visible:border-[#D4AF37] text-xl transition-colors",
+      "label_style": "text-xs tracking-[0.1em] uppercase text-white/50 mb-2 block",
+      "button": "w-full py-6 bg-[#D4AF37] text-black font-semibold tracking-wider uppercase hover:bg-white transition-colors mt-8"
+    },
+    "buttons": {
+      "primary": "inline-flex items-center justify-center px-8 py-4 bg-[#D4AF37] text-black font-medium tracking-wide transition-all hover:bg-white",
+      "outline": "inline-flex items-center justify-center px-8 py-4 bg-transparent border border-white/20 text-white font-medium tracking-wide transition-all hover:border-[#D4AF37] hover:text-[#D4AF37]"
+    }
+  },
+  "media": {
+    "hero": {
+      "url": "https://images.unsplash.com/photo-1544984243-ec57ea16fe25?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBtb2Rlcm4lMjBob3VzZSUyMGV4dGVyaW9yJTIwc3Vuc2V0fGVufDB8fHx8MTc4MTkwMjI5NXww&ixlib=rb-4.1.0&q=85",
+      "alt": "Luxury modern house exterior with pool at sunset",
+      "usage": "Main background for the hero section. Must have heavy gradient overlay so white text is perfectly readable."
+    },
+    "about_team": {
+      "url": "https://images.unsplash.com/photo-1758518729685-f88df7890776?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2OTV8MHwxfHNlYXJjaHwyfHxwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1lZXRpbmclMjBtb2Rlcm4lMjBvZmZpY2V8ZW58MHx8fHwxNzgxOTAyMjk0fDA&ixlib=rb-4.1.0&q=85",
+      "alt": "Professional real estate and marketing team",
+      "usage": "Use in the About Us section, perhaps with a slight grayscale or dark tint filter."
+    },
+    "gallery": [
+      {
+        "url": "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "alt": "Luxurious two storey suburban residential house exterior"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1630699144035-c0f6311ec482?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjByZWFsJTIwZXN0YXRlJTIwaW50ZXJpb3IlMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc4MTkwMjI5NHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Modern luxury living room interior"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1617228133035-2347f159e755?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MTN8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjByZWFsJTIwZXN0YXRlJTIwaW50ZXJpb3IlMjBsaXZpbmclMjByb29tfGVufDB8fHx8MTc4MTkwMjI5NHww&ixlib=rb-4.1.0&q=85",
+        "alt": "Premium real estate interior details"
+      }
+    ]
+  },
+  "testing_attributes": {
+    "contact_name": "data-testid='contact-name-input'",
+    "contact_mobile": "data-testid='contact-mobile-input'",
+    "contact_requirement": "data-testid='contact-requirement-input'",
+    "contact_submit": "data-testid='contact-submit-button'",
+    "google_listings_link": "data-testid='google-listings-link'"
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette. Use the primary and secondary colors as defined.",
+    "Do NOT use standard rounded borders (rounded-md/lg) on primary elements; use square corners (rounded-none) for a high-end editorial feel.",
+    "The Hero section must contain the brand name 'K1 Real Estate and Marketing' and a strong luxury value proposition (e.g., 'Private homes for buyers who expect more.').",
+    "Integrate the 'Google Business Profile' seamlessly, perhaps as a 'View Our Google Reviews' button or embedded map/listings grid.",
+    "Contact form must have Name, Mobile Number, and Requirement fields. Ensure it is frictionless and visually matches the dark luxury aesthetic (e.g., bottom-border only inputs).",
+    "Ensure the contact form logic submits correctly to a FastAPI backend endpoint that handles the email sending.",
+    "Use framer-motion to add sophisticated, slow reveal animations to text and images as the user scrolls."
+  ]
+}
