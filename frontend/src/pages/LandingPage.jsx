@@ -1,3 +1,5 @@
+import { ThemeProvider } from "@/context/ThemeContext";
+import ParticleBackground from "@/components/ParticleBackground";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
@@ -9,16 +11,21 @@ import Footer from "@/components/Footer";
 
 const LandingPage = () => {
   return (
-    <div className="bg-[#0A0A0B] min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Listings />
-      <Gallery />
-      <ContactForm />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="relative min-h-screen">
+        <ParticleBackground />
+        <div className="relative" style={{ zIndex: 1 }}>
+          <Navbar />
+          <Hero />
+          <About />
+          <Services />
+          <Listings />
+          <Gallery />
+          <ContactForm />
+          <Footer />
+        </div>
+      </div>
+    </ThemeProvider>
   );
 };
 
