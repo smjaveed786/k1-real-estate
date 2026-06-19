@@ -64,6 +64,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.12 }}
+              data-testid={`service-card-${i}`}
               className="group bg-[#1A1A1D] border border-white/5 p-8 hover:border-[#D4AF37]/40 transition-all duration-500 hover:-translate-y-2"
             >
               <div className="text-[#D4AF37] mb-6 group-hover:scale-110 transition-transform duration-300">

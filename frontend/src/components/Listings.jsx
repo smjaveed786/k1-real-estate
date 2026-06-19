@@ -119,6 +119,7 @@ const Listings = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
+              data-testid={`property-card-${p.id}`}
               className="group bg-[#121214] border border-white/5 overflow-hidden hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2"
             >
               <div className="relative overflow-hidden h-52">

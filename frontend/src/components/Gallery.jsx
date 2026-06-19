@@ -69,6 +69,7 @@ const Gallery = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
+              data-testid={`gallery-image-${i}`}
               className={`group relative overflow-hidden ${i === 0 ? "row-span-2" : ""}`}
             >
               <img
