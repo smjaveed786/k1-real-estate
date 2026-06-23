@@ -37,7 +37,6 @@ const Navbar = () => {
 
   // If it's light theme, text must be dark even before scrolling because the sky background is bright.
   const textCol = isDark ? "text-[#FAFAFA]" : "text-[#1A1A1D]";
-  const navLinkCol = isDark ? "text-[#A1A1AA]" : "text-[#4A4A50]";
   const mobileMenuBg = isDark ? "bg-[#0A0A0B]/97 border-white/10" : "bg-white/97 border-black/10";
 
   return (
