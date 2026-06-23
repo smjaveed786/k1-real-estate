@@ -22,35 +22,32 @@ const ContactForm = () => {
     setError("");
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     if (!form.name.trim() || !form.mobile.trim() || !form.requirement.trim()) {
       setError("Please fill in all fields.");
       return;
     }
-    setLoading(true);
-    try {
-      await axios.post(`${API}/contact`, form);
-      setSuccess(true);
-      setForm({ name: "", mobile: "", requirement: "" });
-    } catch {
-      setError("Something went wrong. Please try again.");
-    } finally {
-      setLoading(false);
-    }
+    
+    const text = `Hi, I have an inquiry:\n*Name*: ${form.name}\n*Mobile*: ${form.mobile}\n*Requirement*: ${form.requirement}`;
+    const url = `https://wa.me/919392140148?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+    
+    setSuccess(true);
+    setForm({ name: "", mobile: "", requirement: "" });
   };
 
   const inputCls = `w-full bg-transparent border-0 border-b py-3 text-base placeholder:text-[#71717A] focus:outline-none transition-colors duration-300 ${
     c.isDark
-      ? "border-white/20 text-[#FAFAFA] focus:border-[#D4AF37]"
-      : "border-black/20 text-[#1A1A1D] focus:border-[#8B6914]"
+      ? "border-white/20 text-[#FAFAFA] focus:border-[var(--accent-light)]"
+      : "border-black/20 text-[#1A1A1D] focus:border-[var(--accent-dark)]"
   }`;
 
   return (
     <section id="contact" className={`py-24 md:py-32 px-6 md:px-12 lg:px-24 ${c.bg} relative overflow-hidden transition-colors duration-500`} ref={ref}>
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[#D4AF37]/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[#D4AF37]/5 blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-[var(--accent-light)]/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full bg-[var(--accent-light)]/5 blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
@@ -66,26 +63,26 @@ const ContactForm = () => {
 
           <div className="space-y-5">
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0">
-                <MapPin size={16} className="text-[#D4AF37]" />
+              <div className="w-10 h-10 bg-[var(--accent-light)]/10 flex items-center justify-center flex-shrink-0">
+                <MapPin size={16} className="text-[var(--accent-light)]" />
               </div>
               <div>
                 <p className={`text-xs tracking-[0.15em] uppercase mb-1 ${c.textM}`}>Address</p>
-                <p className={`text-sm ${c.textB}`}>Hussain Nagar 1st Line, Guntur–Ponnur Rd,<br />Guntur, Andhra Pradesh 522003</p>
+                <p className={`text-sm ${c.textB}`}>Office No.76, 2nd Floor, Block A, Vaishnavi Complex,<br />Mangalgiri Road, Guntur, Andhra Pradesh - 522001</p>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0">
-                <Phone size={16} className="text-[#D4AF37]" />
+              <div className="w-10 h-10 bg-[var(--accent-light)]/10 flex items-center justify-center flex-shrink-0">
+                <Phone size={16} className="text-[var(--accent-light)]" />
               </div>
               <div>
                 <p className={`text-xs tracking-[0.15em] uppercase mb-1 ${c.textM}`}>Phone / WhatsApp</p>
-                <a href="tel:+919392140148" className={`text-sm hover:text-[#D4AF37] transition-colors ${c.textB}`}>+91 93921 40148</a>
+                <a href="tel:+919392140148" className={`text-sm hover:text-[var(--accent-light)] transition-colors ${c.textB}`}>+91 93921 40148</a>
               </div>
             </div>
             <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-[#D4AF37]/10 flex items-center justify-center flex-shrink-0">
-                <Clock size={16} className="text-[#D4AF37]" />
+              <div className="w-10 h-10 bg-[var(--accent-light)]/10 flex items-center justify-center flex-shrink-0">
+                <Clock size={16} className="text-[var(--accent-light)]" />
               </div>
               <div>
                 <p className={`text-xs tracking-[0.15em] uppercase mb-1 ${c.textM}`}>Working Hours</p>
@@ -109,15 +106,15 @@ const ContactForm = () => {
           {success ? (
             <motion.div data-testid={CONTACT.successMessage}
               initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }}
-              className={`flex flex-col items-center justify-center text-center py-16 border ${c.isDark ? "border-[#D4AF37]/30 bg-[#D4AF37]/5" : "border-[#D4AF37]/40 bg-[#D4AF37]/8"} px-8`}
+              className={`flex flex-col items-center justify-center text-center py-16 border ${c.isDark ? "border-[var(--accent-light)]/30 bg-[var(--accent-light)]/5" : "border-[var(--accent-light)]/40 bg-[var(--accent-light)]/8"} px-8`}
             >
-              <CheckCircle size={48} className="text-[#D4AF37] mb-5" />
+              <CheckCircle size={48} className="text-[var(--accent-light)] mb-5" />
               <h3 style={{ fontFamily: "'Playfair Display', serif" }} className={`text-2xl font-light mb-3 ${c.textH}`}>Thank You!</h3>
               <p className={`leading-relaxed max-w-xs ${c.textB}`}>
                 We've received your inquiry. Our team will contact you at your provided number shortly.
               </p>
               <button onClick={() => setSuccess(false)}
-                className="mt-8 text-sm text-[#D4AF37] border-b border-[#D4AF37]/40 pb-0.5 hover:border-[#D4AF37] transition-colors">
+                className="mt-8 text-sm text-[var(--accent-light)] border-b border-[var(--accent-light)]/40 pb-0.5 hover:border-[var(--accent-light)] transition-colors">
                 Submit Another Inquiry
               </button>
             </motion.div>
@@ -142,7 +139,7 @@ const ContactForm = () => {
               {error && <p data-testid={CONTACT.errorMessage} className="text-sm text-red-400 -mt-4">{error}</p>}
 
               <button type="submit" disabled={loading} data-testid={CONTACT.submitButton}
-                className="w-full py-5 bg-[#D4AF37] text-black font-semibold tracking-wider uppercase text-sm hover:bg-white transition-colors duration-300 flex items-center justify-center gap-3 disabled:opacity-60">
+                className="w-full py-5 bg-[var(--accent-light)] text-black font-semibold tracking-wider uppercase text-sm hover:bg-white transition-colors duration-300 flex items-center justify-center gap-3 disabled:opacity-60">
                 {loading ? (
                   <span className="flex items-center gap-2">
                     <span className="w-4 h-4 border-2 border-black border-t-transparent rounded-full animate-spin" />

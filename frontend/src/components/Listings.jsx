@@ -93,7 +93,7 @@ const Listings = () => {
           <a href="https://www.google.com/maps/search/?api=1&query=K1+Real+Estate+Marketing+%28%40kbn%29&query_place_id=ChIJib6s_OULSjoRundCpbAYxvw"
             target="_blank" rel="noopener noreferrer"
             data-testid={LISTINGS.googleLink}
-            className={`flex items-center gap-2 text-sm border-b pb-1 hover:border-[#D4AF37] whitespace-nowrap transition-colors ${c.textA} border-[#D4AF37]/40`}>
+            className={`flex items-center gap-2 text-sm border-b pb-1 hover:border-[var(--accent-light)] whitespace-nowrap transition-colors ${c.textA} border-[var(--accent-light)]/40`}>
             <ExternalLink size={14} />
             View on Google Business
           </a>
@@ -104,12 +104,12 @@ const Listings = () => {
             <motion.div key={p.id} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               data-testid={`property-card-${p.id}`}
-              className={`group ${c.cardBg} border ${c.borderC} overflow-hidden hover:border-[#D4AF37]/30 transition-all duration-500 hover:-translate-y-2`}>
+              className={`group ${c.cardBg} border ${c.borderC} overflow-hidden hover:border-[var(--accent-light)]/30 transition-all duration-500 hover:-translate-y-2`}>
               <div className="relative overflow-hidden h-52">
                 <img src={p.image} alt={p.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className={`absolute inset-0 bg-gradient-to-t ${c.isDark ? "from-[#121214]" : "from-white"} to-transparent opacity-60`} />
-                <span className="absolute top-4 left-4 px-3 py-1 bg-[#D4AF37] text-black text-xs font-semibold tracking-wide uppercase">
+                <span className="absolute top-4 left-4 px-3 py-1 bg-[var(--accent-light)] text-black text-xs font-semibold tracking-wide uppercase">
                   {p.tag}
                 </span>
               </div>
@@ -129,7 +129,7 @@ const Listings = () => {
                   <p style={{ fontFamily: "'Playfair Display', serif" }} className={`text-xl font-medium ${c.textA}`}>{p.price}</p>
                   <button
                     onClick={() => document.querySelector("#contact")?.scrollIntoView({ behavior: "smooth" })}
-                    className={`text-xs tracking-wider uppercase hover:text-[#D4AF37] transition-colors ${c.textB}`}>
+                    className={`text-xs tracking-wider uppercase hover:text-[var(--accent-light)] transition-colors ${c.textB}`}>
                     Enquire
                   </button>
                 </div>
@@ -143,7 +143,7 @@ const Listings = () => {
           <a href="https://www.google.com/maps/search/?api=1&query=K1+Real+Estate+Marketing+%28%40kbn%29&query_place_id=ChIJib6s_OULSjoRundCpbAYxvw"
             target="_blank" rel="noopener noreferrer"
             data-testid={LISTINGS.viewAllBtn}
-            className={`px-10 py-4 border text-sm font-medium tracking-wider uppercase hover:border-[#D4AF37] hover:text-[#D4AF37] transition-all duration-300 ${c.border2C} ${c.textB}`}>
+            className={`px-10 py-4 border text-sm font-medium tracking-wider uppercase hover:border-[var(--accent-light)] hover:text-[var(--accent-light)] transition-all duration-300 ${c.border2C} ${c.textB}`}>
             View All Google Listings
           </a>
         </motion.div>

@@ -20,19 +20,19 @@ const AdminPage = () => {
       <div className="max-w-5xl mx-auto">
         <div className="mb-8 flex items-center justify-between">
           <div>
-            <p className="text-xs tracking-[0.2em] uppercase text-[#D4AF37] mb-2">Admin Panel</p>
+            <p className="text-xs tracking-[0.2em] uppercase text-[var(--accent-light)] mb-2">Admin Panel</p>
             <h1 style={{ fontFamily: "'Playfair Display', serif" }} className="text-3xl font-light text-[#FAFAFA]">
               Lead Inquiries
             </h1>
           </div>
-          <a href="/" className="text-sm text-[#A1A1AA] hover:text-[#D4AF37] transition-colors">
+          <a href="/" className="text-sm text-[#A1A1AA] hover:text-[var(--accent-light)] transition-colors">
             Back to Site
           </a>
         </div>
 
         {loading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="w-8 h-8 border-2 border-[#D4AF37] border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-2 border-[var(--accent-light)] border-t-transparent rounded-full animate-spin" />
           </div>
         ) : contacts.length === 0 ? (
           <div className="text-center py-20 text-[#71717A]">

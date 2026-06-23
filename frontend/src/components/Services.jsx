@@ -48,7 +48,7 @@ const Services = () => {
               initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.12 }}
               data-testid={`service-card-${i}`}
-              className={`group ${c.bg3} border ${c.borderC} p-8 hover:border-[#D4AF37]/40 transition-all duration-500 hover:-translate-y-2`}
+              className={`group ${c.bg3} border ${c.borderC} p-8 hover:border-[var(--accent-light)]/40 transition-all duration-500 hover:-translate-y-2`}
             >
               <div className={`mb-6 group-hover:scale-110 transition-transform duration-300 ${c.textA}`}>{service.icon}</div>
               <h3 style={{ fontFamily: "'Playfair Display', serif" }} className={`text-xl font-medium mb-3 ${c.textH}`}>{service.title}</h3>

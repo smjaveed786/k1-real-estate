@@ -28,7 +28,7 @@ const Hero = () => {
         <motion.p
           initial={{ opacity: 0, y: 20 }} animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xs font-semibold tracking-[0.25em] uppercase text-[#D4AF37] mb-6"
+          className="text-xs font-semibold tracking-[0.25em] uppercase text-[var(--accent-light)] mb-6"
         >
           Premier Real Estate & Marketing — Guntur, Andhra Pradesh
         </motion.p>
@@ -42,7 +42,7 @@ const Hero = () => {
         >
           K1 Real Estate
           <br />
-          <span className="italic text-[#D4AF37]">&amp; Marketing</span>
+          <span className="italic text-[var(--accent-light)]">&amp; Marketing</span>
         </motion.h1>
 
         <motion.p
@@ -60,13 +60,13 @@ const Hero = () => {
         >
           <button
             data-testid={HERO.exploreBtn} onClick={scrollToListings}
-            className="px-8 py-4 bg-[#D4AF37] text-black font-semibold tracking-wide text-sm uppercase hover:bg-white transition-colors duration-300"
+            className="px-8 py-4 bg-[var(--accent-light)] text-black font-semibold tracking-wide text-sm uppercase hover:bg-white transition-colors duration-300"
           >
             Explore Listings
           </button>
           <button
             data-testid={HERO.contactBtn} onClick={scrollToContact}
-            className={`px-8 py-4 bg-transparent border text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:border-[#D4AF37] hover:text-[#D4AF37] ${
+            className={`px-8 py-4 bg-transparent border text-sm font-medium tracking-wide uppercase transition-all duration-300 hover:border-[var(--accent-light)] hover:text-[var(--accent-light)] ${
               isDark ? "border-white/30 text-white" : "border-[#1A1A1D]/30 text-[#1A1A1D]"
             }`}
           >
@@ -91,7 +91,7 @@ const Hero = () => {
           </a>
           <a
             href="tel:+919392140148"
-            className="flex items-center gap-2 px-5 py-2 border border-[#D4AF37]/50 text-[#D4AF37] text-sm font-medium hover:bg-[#D4AF37] hover:text-black transition-all"
+            className="flex items-center gap-2 px-5 py-2 border border-[var(--accent-light)]/50 text-[var(--accent-light)] text-sm font-medium hover:bg-[var(--accent-light)] hover:text-black transition-all"
           >
             +91 93921 40148
           </a>

@@ -3,12 +3,11 @@ import { motion, useInView } from "framer-motion";
 import { useColors } from "@/context/ThemeContext";
 
 const images = [
-  { url: "https://images.pexels.com/photos/7031413/pexels-photo-7031413.jpeg?auto=compress&cs=tinysrgb&w=600", alt: "Luxury suburban house" },
-  { url: "https://images.unsplash.com/photo-1630699144035-c0f6311ec482?w=600&q=80", alt: "Modern luxury living room" },
-  { url: "https://images.unsplash.com/photo-1617228133035-2347f159e755?w=600&q=80", alt: "Premium real estate interior" },
-  { url: "https://images.unsplash.com/photo-1600607687939-ce8a6c349c8c?w=600&q=80", alt: "Elegant master bedroom" },
-  { url: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=600&q=80", alt: "Luxury pool and garden" },
-  { url: "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80", alt: "Beautiful house facade" },
+  { url: "/gallery/media__1782245913819.jpg", alt: "Property Layout Plan 1" },
+  { url: "/gallery/media__1782245913883.jpg", alt: "K1 Venture Project Details" },
+  { url: "/gallery/media__1782245913907.jpg", alt: "K1 Real Estate Marketing Services" },
+  { url: "/gallery/media__1782245913915.jpg", alt: "Property Layout Plan 2" },
+  { url: "/gallery/media__1782245913989.jpg", alt: "K1 Venture Investment Opportunity" },
 ];
 
 const Gallery = () => {

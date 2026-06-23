@@ -8,6 +8,7 @@ import Listings from "@/components/Listings";
 import Gallery from "@/components/Gallery";
 import ContactForm from "@/components/ContactForm";
 import Footer from "@/components/Footer";
+import ThemeSettings from "@/components/ThemeSettings";
 
 const LandingPage = () => {
   return (
@@ -23,6 +24,7 @@ const LandingPage = () => {
           <Gallery />
           <ContactForm />
           <Footer />
+          <ThemeSettings />
         </div>
       </div>
     </ThemeProvider>

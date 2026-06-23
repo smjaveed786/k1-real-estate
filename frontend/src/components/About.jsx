@@ -28,19 +28,19 @@ const About = () => {
             <br /><span className="italic">One Property at a Time</span>
           </h2>
           <p className={`text-base leading-relaxed mb-4 ${c.textB}`}>
-            K1 Real Estate Marketing (KBN) is a trusted property consultant based in Guntur, Andhra Pradesh. From the heart of Hussain Nagar, we serve buyers and sellers across Guntur, Budampadu, Ponnur Road, and the NH-16 corridor.
+            K1 Real Estate Marketing (KBN) is a trusted property consultant based in Guntur, Andhra Pradesh. From our office at Vaishnavi Complex on Mangalgiri Road, we serve buyers and sellers across Guntur, Budampadu, Ponnur Road, and the NH-16 corridor.
           </p>
           <p className={`text-base leading-relaxed mb-4 ${c.textB}`}>
             We specialize in plots, agricultural lands, residential homes, and commercial spaces — with deep local expertise and a commitment to transparent, honest service.
           </p>
           <p className={`text-sm leading-relaxed mb-10 ${c.textM}`}>
-            Hussain Nagar 1st Line, Guntur–Ponnur Rd, Guntur, Andhra Pradesh 522003
+            Office No.76, 2nd Floor, Block A, Vaishnavi Complex, Mangalgiri Road, Guntur, Andhra Pradesh - 522001
           </p>
 
           <a
             href="https://www.google.com/maps/search/?api=1&query=K1+Real+Estate+Marketing+%28%40kbn%29&query_place_id=ChIJib6s_OULSjoRundCpbAYxvw"
             target="_blank" rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 border border-[#D4AF37] text-[#D4AF37] text-sm font-medium tracking-wider uppercase hover:bg-[#D4AF37] hover:text-black transition-all duration-300"
+            className="inline-flex items-center gap-2 px-6 py-3 border border-[var(--accent-light)] text-[var(--accent-light)] text-sm font-medium tracking-wider uppercase hover:bg-[var(--accent-light)] hover:text-black transition-all duration-300"
           >
             View on Google Maps
           </a>
@@ -51,13 +51,23 @@ const About = () => {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           className="space-y-6"
         >
-          <div className="relative overflow-hidden h-72 lg:h-80">
-            <img
-              src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=800&q=85"
-              alt="K1 Real Estate professional team Guntur"
-              className={`w-full h-full object-cover transition-all duration-700 hover:grayscale-0 ${c.isDark ? "grayscale" : ""}`}
-            />
-            <div className={`absolute inset-0 bg-gradient-to-t ${c.isDark ? "from-[#0A0A0B]/60" : "from-white/40"} to-transparent`} />
+          <div className={`flex flex-col items-center justify-center py-8 px-4 ${c.cardBg} border ${c.borderC} rounded-2xl shadow-sm mb-2`}>
+            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-5 border-4 border-[var(--accent-light)] shadow-lg hover:scale-105 transition-transform duration-500 bg-black/5 dark:bg-white/5 flex items-center justify-center">
+              <img
+                src="/founder.png"
+                alt="Shaik Mohammad Ifthikar Ahamed (KHALEEL)"
+                className="w-full h-full object-cover object-top scale-110"
+              />
+            </div>
+            <h3 style={{ fontFamily: "'Playfair Display', serif" }} className={`text-2xl text-center mb-1 ${c.textH}`}>
+              Shaik Mohammad Ifthikar Ahamed
+            </h3>
+            <p className={`text-sm tracking-wider uppercase text-center ${c.textM}`}>
+              (Khaleel)
+            </p>
+            <p className={`text-xs mt-3 text-[var(--accent-light)] font-semibold uppercase tracking-[0.2em] text-center`}>
+              Company Founder
+            </p>
           </div>
 
           <div className="grid grid-cols-2 gap-4">

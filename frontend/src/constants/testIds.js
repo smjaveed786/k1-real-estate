@@ -1,7 +1,3 @@
-export const HOME = {
-  emergentLink: "emergent-link",
-};
-
 export const NAV = {
   logo: "nav-logo",
   menuToggle: "nav-menu-toggle",

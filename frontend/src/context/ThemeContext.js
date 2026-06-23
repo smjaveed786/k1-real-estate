@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ThemeCtx = createContext({ isDark: true, toggle: () => {} });
 
 export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   return (
     <ThemeCtx.Provider value={{ isDark, toggle: () => setIsDark((p) => !p) }}>
       {children}
@@ -23,12 +23,12 @@ export const useColors = () => {
     bgFoot:   isDark ? "bg-[rgba(8,8,8,0.95)]"      : "bg-[rgba(238,237,232,0.95)]",
     cardBg:   isDark ? "bg-[rgba(18,18,20,0.92)]"   : "bg-[rgba(255,255,255,0.92)]",
     textH:    isDark ? "text-[#FAFAFA]" : "text-[#1A1A1D]",
-    textB:    isDark ? "text-[#A1A1AA]" : "text-[#4A4A50]",
-    textM:    isDark ? "text-[#71717A]" : "text-[#888888]",
-    textA:    isDark ? "text-[#D4AF37]" : "text-[#8B6914]",
-    accent:   isDark ? "#D4AF37"        : "#8B6914",
+    textB:    isDark ? "text-[#E4E4E7]" : "text-[#3F3F46]",
+    textM:    isDark ? "text-[#A1A1AA]" : "text-[#52525B]",
+    textA:    isDark ? "text-[var(--accent-light)]" : "text-[var(--accent-dark)]",
+    accent:   isDark ? "var(--accent-light)"        : "var(--accent-dark)",
     borderC:  isDark ? "border-white/5" : "border-black/[0.07]",
     border2C: isDark ? "border-white/10": "border-black/[0.1]",
-    overline: isDark ? "text-[#D4AF37]" : "text-[#8B6914]",
+    overline: isDark ? "text-[var(--accent-light)]" : "text-[var(--accent-dark)]",
   };
 };

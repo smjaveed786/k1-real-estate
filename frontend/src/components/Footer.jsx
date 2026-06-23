@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="mb-5">
               <span style={{ fontFamily: "'Playfair Display', serif" }}
-                className="text-3xl font-medium tracking-widest text-[#D4AF37]">K1</span>
+                className="text-3xl font-medium tracking-widest text-[var(--accent-light)]">K1</span>
               <span className={`text-[10px] tracking-[0.25em] uppercase ml-2 ${c.textM}`}>Real Estate & Marketing</span>
             </div>
             <p className={`text-sm leading-relaxed max-w-xs mb-2 ${c.textM}`}>
@@ -33,14 +33,14 @@ const Footer = () => {
             <div className="flex gap-4">
               <a href="https://www.google.com/maps/search/?api=1&query=K1+Real+Estate+Marketing+%28%40kbn%29&query_place_id=ChIJib6s_OULSjoRundCpbAYxvw"
                 target="_blank" rel="noopener noreferrer"
-                className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all duration-300`}
+                className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[var(--accent-light)] hover:border-[var(--accent-light)]/30 transition-all duration-300`}
                 aria-label="Google Business">
                 <ExternalLink size={15} />
               </a>
-              <a href="#" className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all duration-300`} aria-label="Instagram">
+              <a href="https://www.instagram.com/k1_real_estate?igsh=MXVzcW9vcDJpcXczMw==" target="_blank" rel="noopener noreferrer" className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[var(--accent-light)] hover:border-[var(--accent-light)]/30 transition-all duration-300`} aria-label="Instagram">
                 <Instagram size={15} />
               </a>
-              <a href="#" className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[#D4AF37] hover:border-[#D4AF37]/30 transition-all duration-300`} aria-label="Facebook">
+              <a href="https://www.facebook.com/share/1Exh6kiPSB/" target="_blank" rel="noopener noreferrer" className={`w-9 h-9 ${c.bg3} border ${c.borderC} flex items-center justify-center ${c.textM} hover:text-[var(--accent-light)] hover:border-[var(--accent-light)]/30 transition-all duration-300`} aria-label="Facebook">
                 <Facebook size={15} />
               </a>
               <a href="https://wa.me/919392140148" target="_blank" rel="noopener noreferrer"
@@ -59,7 +59,7 @@ const Footer = () => {
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <button onClick={() => handleNavClick(link.href)}
-                    className={`text-sm hover:text-[#D4AF37] transition-colors ${c.textM}`}>
+                    className={`text-sm hover:text-[var(--accent-light)] transition-colors ${c.textM}`}>
                     {link.label}
                   </button>
                 </li>
@@ -71,15 +71,15 @@ const Footer = () => {
             <p className={`text-xs tracking-[0.2em] uppercase mb-6 ${c.textB}`}>Contact Info</p>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <MapPin size={15} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
-                <span className={`text-sm ${c.textM}`}>Hussain Nagar 1st Line, Guntur–Ponnur Rd, Guntur, AP 522003</span>
+                <MapPin size={15} className="text-[var(--accent-light)] mt-0.5 flex-shrink-0" />
+                <span className={`text-sm ${c.textM}`}>Office No.76, 2nd Floor, Block A, Vaishnavi Complex, Mangalgiri Road, Guntur, Andhra Pradesh - 522001</span>
               </li>
               <li className="flex items-start gap-3">
-                <Phone size={15} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
-                <a href="tel:+919392140148" className={`text-sm hover:text-[#D4AF37] transition-colors ${c.textM}`}>+91 93921 40148</a>
+                <Phone size={15} className="text-[var(--accent-light)] mt-0.5 flex-shrink-0" />
+                <a href="tel:+919392140148" className={`text-sm hover:text-[var(--accent-light)] transition-colors ${c.textM}`}>+91 93921 40148</a>
               </li>
               <li className="flex items-start gap-3">
-                <Clock size={15} className="text-[#D4AF37] mt-0.5 flex-shrink-0" />
+                <Clock size={15} className="text-[var(--accent-light)] mt-0.5 flex-shrink-0" />
                 <span className={`text-sm ${c.textM}`}>Mon – Sun: 9:00 AM – 8:00 PM</span>
               </li>
             </ul>
